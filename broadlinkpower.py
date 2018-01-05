@@ -112,7 +112,7 @@ class BroadlinkData(object):
 
     def _update(self, retry=3):
         try:
-            data = self._device.get_energy()
+            data = self._device.get_energy_raw_p3()
             if data is not None:
                 self.data = self._schema(data)
                 return
